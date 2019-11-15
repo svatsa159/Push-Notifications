@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Push Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <form action="127.0.0.1:8000/" method="post" id="file-upload-form" enctype="multipart/form-data"> 
+        <input type="file">
+        <button type="submit" class="btn btn-primary" id='upload-btn' onclick="upload()">Upload</button>
+    </form>
+</body>
+</html>
