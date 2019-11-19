@@ -40,5 +40,13 @@ app.get('/send-notification', (req, res) => {
   const message = 'Hello World'
   sendNotification(subscription, message)
   res.json({ message: 'message sent' })
+});
+app.post('/personalised_notification',(req,res) =>{
+  const subscription = dummyDb.subscription
+  var message =req.query.message;
+  console.log(message);
+  
+  sendNotification(subscription, message)
+  res.json({ message: 'message sent' })
 })
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

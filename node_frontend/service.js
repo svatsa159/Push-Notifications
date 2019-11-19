@@ -10,6 +10,7 @@ const urlB64ToUint8Array = base64String => {
     }
     return outputArray
   }
+
   const saveSubscription = async subscription => {
     const SERVER_URL = 'http://localhost:4000/save-subscription'
     const response = await fetch(SERVER_URL, {
@@ -39,6 +40,7 @@ const urlB64ToUint8Array = base64String => {
     if (event.data) {
       console.log('Push event!! ', event.data.text())
       showLocalNotification('Yolo', event.data.text(), self.registration)
+      
     } else {
       console.log('Push event but no data')
     }
@@ -48,5 +50,25 @@ const urlB64ToUint8Array = base64String => {
       body,
       // here you can add more properties like icon, image, vibrate, etc.
     }
-    swRegistration.showNotification(title, options)
-  }
+    var notification = swRegistration.showNotification(title, options)
+    
+  };
+  
+  // self.swRegistration.onnotificationclick = function(event) {
+  //   console.log('On notification click: ', event.notification.tag);
+  //   event.notification.close();
+  
+  //   // This looks to see if the current is already open and
+  //   // focuses if it is
+  //   event.waitUntil(clients.matchAll({
+  //     type: "window"
+  //   }).then(function(clientList) {
+  //     for (var i = 0; i < clientList.length; i++) {
+  //       var client = clientList[i];
+  //       if (client.url == '/' && 'focus' in client)
+  //         return client.focus();
+  //     }
+  //     if (clients.openWindow)
+  //       return clients.openWindow('/');
+  //   }));
+  // };
