@@ -44,7 +44,7 @@ app.get('/send-notification', (req, res) => {
 app.post('/personalised_notification',(req,res) =>{
   const subscription = dummyDb.subscription
   var message =req.query.message;
-  console.log(message);
+  // console.log(message);
   
   sendNotification(subscription, message)
   res.json({ message: 'message sent' })
