@@ -39,7 +39,7 @@ const urlB64ToUint8Array = base64String => {
   self.addEventListener('push', function(event) {
     if (event.data) {
       console.log('Push event!! ', event.data.text())
-      showLocalNotification('Yolo', event.data.text(), self.registration)
+      showLocalNotification(event.data.text(),'This is a Push notification', self.registration)
       
     } else {
       console.log('Push event but no data')
