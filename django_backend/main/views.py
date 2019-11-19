@@ -24,7 +24,7 @@ def post_upload_view(request):
         notifs.notify_users("File uploaded")
         
         ProcessThread().start()
-        return redirect("http://127.0.0.1:8080/")
+        return redirect("http://35.224.23.154:8080/")
 
 def get_data(request):
     # url = 'http://localhost:4000/send-notification/'
