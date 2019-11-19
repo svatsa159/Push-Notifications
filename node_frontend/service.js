@@ -26,7 +26,7 @@ const urlB64ToUint8Array = base64String => {
     // This will be called only once when the service worker is installed for first time.
     try {
       const applicationServerKey = urlB64ToUint8Array(
-        'BJ5IxJBWdeqFDJTvrZ4wNRu7UY2XigDXjgiUBYEYVXDudxhEs0ReOJRBcBHsPYgZ5dyV8VjyqzbQKS8V7bUAglk'
+        'BBozefFNjr6h_sXIFq05XOOIgyxYHRe0p5vCtRdQaxRjS1VAV4E1scSlIH_Yt-V1CQabwsv38txsRM5AIfeNNhA'
       )
       const options = { applicationServerKey, userVisibleOnly: true }
       const subscription = await self.registration.pushManager.subscribe(options)

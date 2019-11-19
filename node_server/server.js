@@ -21,8 +21,8 @@ app.post('/save-subscription', async (req, res) => {
 })
 const vapidKeys = {
   publicKey:
-    'BJ5IxJBWdeqFDJTvrZ4wNRu7UY2XigDXjgiUBYEYVXDudxhEs0ReOJRBcBHsPYgZ5dyV8VjyqzbQKS8V7bUAglk',
-  privateKey: 'ERIZmc5T5uWGeRxedxu92k3HnpVwy_RCnQfgek1x2Y4',
+    'BBozefFNjr6h_sXIFq05XOOIgyxYHRe0p5vCtRdQaxRjS1VAV4E1scSlIH_Yt-V1CQabwsv38txsRM5AIfeNNhA',
+  privateKey: 'E-Nutp54VMJ-FdKKQ1c2gdKUMGRdQoo4CWRHVsvmEBM',
 }
 //setting our previously generated VAPID keys
 webpush.setVapidDetails(
