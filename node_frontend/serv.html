@@ -21,6 +21,7 @@ success : function(data) {
    if(jso.data==1){
     var img = $('<img id="image_id">');
     img.attr('src', 'data:image/png;base64,' + jso.image);
+    img.attr('style','width:50vw;height:auto')
     img.appendTo('body');
    }
    else{
