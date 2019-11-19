@@ -5,6 +5,8 @@ const check = () => {
     if (!('PushManager' in window)) {
       throw new Error('No Push API Support!')
     }
+    
+    
   }
   const registerServiceWorker = async () => {
     const swRegistration = await navigator.serviceWorker.register('service.js')
@@ -19,11 +21,15 @@ const check = () => {
     if (permission !== 'granted') {
       throw new Error('Permission not granted for Notification')
     }
+    else{
+      console.log("cc");
+    }
   }
   const main = async () => {
     check()
     const swRegistration = await registerServiceWorker()
     const permission = await requestNotificationPermission()
+    
   }
   main(); //we will not call main in the beginning.
 
