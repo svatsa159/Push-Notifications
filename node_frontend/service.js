@@ -12,7 +12,7 @@ const urlB64ToUint8Array = base64String => {
   }
 
   const saveSubscription = async subscription => {
-    const SERVER_URL = 'http://35.224.23.154:4000/save-subscription'
+    const SERVER_URL = 'http://35.224.209.131:4000/save-subscription'
     const response = await fetch(SERVER_URL, {
       method: 'post',
       headers: {

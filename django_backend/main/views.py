@@ -20,7 +20,7 @@ def post_upload_view(request):
         notifs.notify_users("File uploaded")
         
         ProcessThread().start()
-        return redirect("http://35.224.23.154:8080/")
+        return redirect("http://35.224.209.131:8080/")
 
 def get_data(request):
     if(os.path.isfile("res1.jpeg")):

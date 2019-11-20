@@ -40,7 +40,7 @@ const check = () => {
     var data = new FormData($('form').get(0));
     
     $.ajax({
-        url: 'http://35.224.23.154:8000/postdata',
+        url: 'http://35.224.209.131:8000/postdata',
         type: 'POST',
         data: data,
         cache: false,
