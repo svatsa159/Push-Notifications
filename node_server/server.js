@@ -13,12 +13,21 @@ const saveToDatabase = async subscription => {
   // Here you should be writing your db logic to save it.
   dummyDb.subscription = subscription
 }
+
+
+
+
+
+
 // The new /save-subscription endpoint
 app.post('/save-subscription', async (req, res) => {
   const subscription = req.body
   await saveToDatabase(subscription) //Method to save the subscription to Database
   res.json({ message: 'success' })
 })
+
+
+
 const vapidKeys = {
   publicKey:
     'BBozefFNjr6h_sXIFq05XOOIgyxYHRe0p5vCtRdQaxRjS1VAV4E1scSlIH_Yt-V1CQabwsv38txsRM5AIfeNNhA',
